@@ -27,6 +27,8 @@ DEBUG = True
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+ALLOWED_HOSTS = ['django-tutorial-dev2222222.us-west-2.elasticbeanstalk.com']
+
 # Application definition
 
 INSTALLED_APPS = [
