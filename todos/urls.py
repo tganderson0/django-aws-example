@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-#from django.conf.urls.static import static
+from django.conf.urls.static import static
 # added in, this should be done
 
 urlpatterns = [
@@ -25,5 +25,5 @@ urlpatterns = [
     path('', include('frontend.urls')),
 ]
 
-#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # added in, this should be done
