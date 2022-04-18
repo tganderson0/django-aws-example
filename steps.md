@@ -79,3 +79,21 @@ WSGIProcessGroup <YOUR APP NAME>
 WSGIScriptAlias / /home/ubuntu/<YOUR APP NAME>/<YOUR APP NAME>/wsgi.py
 </VirtualHost>
 ```
+
+### Last steps
+
+#### Allow Apache to use the database and project
+
+`chmod 664 db.sqlite3`
+
+`sudo chown :www-data db.sqlite3`
+
+`sudo chown :www-data ~/<PROJECT LOCATION>`
+
+
+### And Finally
+
+`sudo service apache2 restart`
+
+This starts the server. You should be able to visit your IP and see your django project now!
+
