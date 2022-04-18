@@ -25,5 +25,5 @@ urlpatterns = [
     path('', include('frontend.urls')),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+#urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 # added in, this should be done
