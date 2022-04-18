@@ -57,26 +57,26 @@ The first command you know, the second, collects all the static files needed for
 
 Edit the file called `/etc/apache2/sites-available/000-default.conf` and put the following.
 
-Note that you should replace `<YOUR APP NAME>` with the folder name of your project, and the path should match where you actually cloned it. This assumes you have it in the home directory.
+Note that you should replace `<YOUR APP NAME>` with the name of your project, and the path `<PATH TO PROJECT>` should match where you actually cloned it (including the name of the folder from cloning).
 
 ```
 <VirtualHost *:80>
 ServerAdmin webmaster@example.com
-DocumentRoot /home/ubuntu/<YOUR APP NAME>
+DocumentRoot <PATH TO PROJECT>
 ErrorLog ${APACHE_LOG_DIR}/error.log
 CustomLog ${APACHE_LOG_DIR}/access.log combined
-Alias /static /home/ubuntu/<YOUR APP NAME>/static
-<Directory /home/ubuntu/<YOUR APP NAME>/static>
+Alias /static <PATH TO PROJECT>/static
+<Directory <PATH TO PROJECT>/static>
 Require all granted
 </Directory>
-<Directory /home/ubuntu/<YOUR APP NAME>/todos>
+<Directory <PATH TO PROJECT>/<APP NAME>>
 <Files wsgi.py>
 Require all granted
 </Files>
 </Directory>
-WSGIDaemonProcess <YOUR APP NAME> python-path=/home/ubuntu/<YOUR APP NAME> python-home=/home/ubuntu/<YOUR APP NAME>/<VIRTUALENV NAME FROM EARLIER STEP>
+WSGIDaemonProcess <YOUR APP NAME> python-path=<PATH TO PROJECT> python-home=<PATH TO PROJECT>/<VIRTUALENV NAME FROM EARLIER STEP>
 WSGIProcessGroup <YOUR APP NAME>
-WSGIScriptAlias / /home/ubuntu/<YOUR APP NAME>/<YOUR APP NAME>/wsgi.py
+WSGIScriptAlias / <PATH TO PROJECT>/<YOUR APP NAME>/wsgi.py
 </VirtualHost>
 ```
 
