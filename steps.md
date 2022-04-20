@@ -8,6 +8,11 @@ You will want to pick an EC2 instance that is running ubuntu. This doesn't have 
 
 ## Setting Up Server
 
+### Notes for presentation
+
+`ssh ubuntu@54.189.30.224 <- connecting to aws`
+
+
 1. Clone your project onto the computer
 2. In the project's `settings.py`, add the following lines:
 
@@ -41,9 +46,11 @@ You'll also want to change `DEBUG` to false.
 
 I'll note, it doesn't need to be called myprojectenv, but you should remember the name that you chose.
 
-7. Back in `settings.py`, add the server's IP and domain name to `ALLOWED_HOSTS`
+7. Run `pip install -r requirements.txt`
 
-8. Run `pip install -r requirements.txt`
+8. Back in `settings.py`, add the server's IP and domain name to `ALLOWED_HOSTS`
+
+
 
 
 Now you have almost everything ready with django, just run:
@@ -128,6 +135,3 @@ This starts the server. You should be able to visit your IP and see your django 
 
 
 
-### Notes for presentation
-
-`ssh ubuntu@54.189.30.224 <- connecting to aws`
