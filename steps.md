@@ -1,11 +1,11 @@
-# Steps to Setting up Django Server
+# Steps to Setting up Django Server with Apache
 
 Whatever you run this on, it will need at least Python 3.8 or greater to get the newest version of django. 
 > Raspberry Pi you may need to manually compile Python 3.8, there are many guides on how to do this, or yours may already have it. Alternatively, a lower version of Django will run on Python 3.7 as well
 
 ## Set Up EC2 Instance OR any Ubuntu computer
 
-You will want to pick an EC2 instance that is running ubuntu. This doesn't have to be on AWS though, just anything that is running ubuntu, even your own laptop.
+You will want to pick an EC2 instance on AWS that is running ubuntu. This doesn't have to be on AWS though, just anything that is running ubuntu, even your own laptop.
 
 ### SSH to a server
 
@@ -50,8 +50,6 @@ I'll note, it doesn't need to be called myprojectenv, but you should remember th
 7. Run `pip install -r requirements.txt`
 
 8. Back in `settings.py`, add the server's IP and domain name to `ALLOWED_HOSTS`
-
-
 
 
 Now you have almost everything ready with django, just run:
