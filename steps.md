@@ -126,3 +126,8 @@ WSGIScriptAlias / /home/ubuntu/todos/todos/wsgi.py
 
 This starts the server. You should be able to visit your IP and see your django project now!
 
+
+
+### Notes for presentation
+
+`ssh ubuntu@54.189.30.224 <- connecting to aws`
