@@ -1,17 +1,18 @@
 # Steps to Setting up Django Server
 
-Whatever you run this on, it will need at least Python3.8 or greater to get the newest version of django.
+Whatever you run this on, it will need at least Python 3.8 or greater to get the newest version of django. 
+> Raspberry Pi you may need to manually compile Python 3.8, there are many guides on how to do this, or yours may already have it. Alternatively, a lower version of Django will run on Python 3.7 as well
 
-## Set Up EC2 Instance
+## Set Up EC2 Instance OR any Ubuntu computer
 
-You will want to pick an EC2 instance that is running ubuntu. This doesn't have to be on AWS though, just anything that is running ubuntu, even your own laptop
+You will want to pick an EC2 instance that is running ubuntu. This doesn't have to be on AWS though, just anything that is running ubuntu, even your own laptop.
 
-## Setting Up Server
+### SSH to a server
 
-### Notes for presentation
+`ssh username@IP-ADDRESS`
 
-`ssh ubuntu@54.189.30.224 <- connecting to aws`
 
+## Setting up Server
 
 1. Clone your project onto the computer
 2. In the project's `settings.py`, add the following lines:
@@ -28,9 +29,9 @@ This configures django to know where to serve static files from when we switch o
 
 You'll also want to change `DEBUG` to false.
 
-3. Now, you need to create a folder in the top level called 'static'
+3. Now, you need to create a folder in the top level called `static`
 
-4. You will have a list of required python modules for your server, which you should put into requirements.txt. This lets the server know exactly what modules it needs, so you don't have to install every single module that you have into it.
+4. You will have a list of required python modules for your server, which you should put into `requirements.txt`. This lets the server know exactly what modules it needs, so you don't have to install every single module that you have into it.
 
 5. Installing required libraries (DONE ON SERVER)
 
@@ -118,13 +119,13 @@ WSGIScriptAlias / /home/ubuntu/todos/todos/wsgi.py
 
 ### Last steps
 
-#### Allow Apache to use the database and project
+#### Allow Apache to use and modify the database and project
 
 `chmod 664 db.sqlite3`
 
 `sudo chown :www-data db.sqlite3`
 
-`sudo chown :www-data ~/<PROJECT LOCATION>`
+`sudo chown :www-data <PROJECT LOCATION>`
 
 
 ### And Finally
@@ -132,8 +133,3 @@ WSGIScriptAlias / /home/ubuntu/todos/todos/wsgi.py
 `sudo service apache2 restart`
 
 This starts the server. You should be able to visit your IP and see your django project now!
-
-
-## Server address
-
-`ec2-54-189-30-224.us-west-2.compute.amazonaws.com`

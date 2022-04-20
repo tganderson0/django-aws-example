@@ -1,4 +1,4 @@
-const API_ENDPOINT = 'http://localhost:8000/api'; // This should be replaced by your AWS location
+const API_ENDPOINT = '/api'; // This should be replaced by your AWS location
 
 /*
  our todos will have the following form:
