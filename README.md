@@ -1,6 +1,6 @@
 # Example Django Project
 
-This is the backend django for my AWS example presentation. Just a basic django app that serves the todo model, but you can't update the backend state. It is truly just the bare essentials to show that there is a connection between the frontend and backend.
+This is an example repository that you can use to try setting up a web server using Apache. This assumes you have access to a computer running Ubuntu, with  >= Python 3.8.
 
 ## Setting up a project
 
