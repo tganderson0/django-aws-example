@@ -9,13 +9,13 @@ const API_ENDPOINT = '/api'; // This should be replaced by your AWS location
 */
 
 const app = Vue.createApp({
-  delimiters: [ '[%', '%]' ],
+  delimiters: ['[%', '%]'],
   data() {
     return {
       todos: [{ task: 'write the website', state: 'incomplete' }, { task: 'write the django backend', state: 'incomplete' }],
     }
   },
-  created(){
+  created() {
     fetch(`${API_ENDPOINT}`)
       .then(response => response.json())
       .then(data => {
@@ -27,12 +27,11 @@ const app = Vue.createApp({
             pk: todo.pk,
           }
         });
-        console.log(this.todos);
       })
       .catch(e => console.log(e));
   },
   methods: {
-    toggleComplete(todo){
+    toggleComplete(todo) {
       todo.state = todo.state == 'complete' ? 'incomplete' : 'complete'; // simple switch of the state to the opposite state
     }
   }
