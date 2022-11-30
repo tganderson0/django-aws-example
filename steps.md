@@ -125,6 +125,13 @@ WSGIScriptAlias / /home/ubuntu/todos/todos/wsgi.py
 
 `sudo chown :www-data <PROJECT LOCATION>`
 
+If you get an apache error saying that the path couldn't be found or such, try this command, and then reload:
+
+`sudo chmod 755 /home/<USER>`
+
+In my case it was just
+
+`sudo chmod 755 /home/ubuntu`
 
 ### And Finally
 
